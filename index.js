@@ -24,13 +24,14 @@ client.prefix = "r!";
 
 client.on(Events.MessageCreate, async (message) => {
   if (message.content.slice(0, 2) !== client.prefix) return; // si el mensaje no empieza con "r!" entonces se ignora
-  const messageWithoutPrefix = message.content
+  const [command] = message.content
     .slice(2) // copiamos todo el mensaje sin el "r!" <3
     .toLowerCase() // convierte todo a minúscula :)
-    .trim(); // Remueve los espacios innecesarios :o
+    .trim() // Remueve los espacios innecesarios :o
+    .split(' '); // Convierte el string a array separando por " "
 
-  if (commands[messageWithoutPrefix]) {
-    commands[messageWithoutPrefix](message);
+  if (commands[command]) {
+    commands[command](message);
   }
 });
 
