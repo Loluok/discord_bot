@@ -1,10 +1,10 @@
 import getHelp from "./help.js";
-import getAngry from "./angry.js"
-import getComando from "./nuevoComando.js";
+import getAngry from "./angry.js";
+import getBlush from "./blush.js";
 
 const commands = {
   help: getHelp,
-  nuevocomando: getComando,
+  blush: getBlush,
   angry: getAngry,
 };
 
