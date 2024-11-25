@@ -1,31 +1,32 @@
 import { EmbedBuilder } from "discord.js";
 
-const randomGifs = [
-    "https://cdn.discordapp.com/attachments/1308585862803492934/1310010267911848018/e60445406301561fbbeb62e7c4959ad4.gif?ex=6743a9a2&is=67425822&hm=a34558d2fe73f1f7a2c211e2e76c1c0546fcf446c14f300983211fce893ccacd&",
-    "https://cdn.discordapp.com/attachments/837459049096020029/1310012255454101645/63d7d74c6fb962f048099e57ad4e67ae.gif?ex=6743ab7c&is=674259fc&hm=afa535aa2caa9f680ba8985195a7a321cdedb67ebcee0da4abce6514500707e9&",
-    "https://cdn.discordapp.com/attachments/837459049096020029/1310012759538274466/458ec6c19f0db46d0dacc9a94ee3e16d.gif?ex=6743abf4&is=67425a74&hm=a087775b449a764f84fb0745e5ad3a47c757118e51801d50df5c5420745fddf0&",
-    "https://cdn.discordapp.com/attachments/837459049096020029/1310012760020488202/4b3b84ff9315f3673c41ca0029434104.gif?ex=6743abf4&is=67425a74&hm=a1046e4e92ab52cdf3779b0687ce420ec5e8c25411b7ad1b69ced1aac1d60c21&",
-    "https://cdn.discordapp.com/attachments/837459049096020029/1310012760402432100/79296b3ba64683b40452454247008b0b.gif?ex=6743abf4&is=67425a74&hm=e2fd15c5b4550f62f3751bbaeaa58295fc67da06631defd5584f807d6ead081f&",
-    "https://cdn.discordapp.com/attachments/837459049096020029/1310012760829984910/d9cfa96a90678c65fc81a7147681e621.gif?ex=6743abf5&is=67425a75&hm=9bd56e34607d2e14d369584b9396bcb043421dd2ec0de97a64852ccbb2729c89&",
-    "https://cdn.discordapp.com/attachments/837459049096020029/1310012761312591942/cc9dd3a99a069fa5a2548d8f57f4d5d8.gif?ex=6743abf5&is=67425a75&hm=d6c3e6bec8904d14b229b21e73afebdb5a26bdbb4b0f4256daf3d42bc2394052&"]
+const randomGifs = ["https://cdn.discordapp.com/attachments/882829220198375434/1310719539717345348/Angry_GIF_-_Angry_-_Descubrir_y_compartir_GIFs.gif?ex=67463e32&is=6744ecb2&hm=238f4ddc058fd2a613d75dfe9e49b07e47000b00988126056c4d067ac2bd6e83&",
+"https://cdn.discordapp.com/attachments/1309705495904518174/1310723985209692220/Cat_Angry_GIF_-_Cat_Angry_Meme_-_Discover__Share_GIFs-min.gif?ex=67464256&is=6744f0d6&hm=458c9f77f5d5dd7f970d93ac84035bba1bb6789066f3812e41a659687d4ae8bf&",
+"https://cdn.discordapp.com/attachments/1309705495904518174/1310723985696358470/Angry_Kitten_Angry_Cat_GIF_Angry_Kitten_Angry_Cat_Made_It_To_Work_discover_and_share_GIFs-min.gif?ex=67464256&is=6744f0d6&hm=6ac37447dd26d43a6d1638610d09c9148cc6a3be5cefcedfb69799f746805242&"
+]
 
-    const messages = ["se enojó con", "le partió la madre a", "le sacó la chucha a "];
+const messages = ["se enojó con"]
+const messagesAlone = ["se enojó", "se ofendió", "se le calentaron las papas", "se pudrió", "is upset"]
 
 export default function getAngry(message) {
-    const mentionedUser = message.mentions.users.first();
+    const mentionedUser = message.mentions.users.first()
+
+    const randomGif = randomGifs[Math.floor(Math.random() * randomGifs.length)]
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)]
+    const userMessage = message.member.user.username
+
+    let description = `**${userMessage}** ${randomMessage} **${mentionedUser?.username}**`
 
     if (!mentionedUser) {
-        return message.reply("Menciona a alguien, pelotudin")
+        const aloneMessage = messagesAlone[Math.floor(Math.random() * messagesAlone.length)]
+        description = `**${userMessage}** ${aloneMessage}`
     }
-
-    const userMessage = message.member.user.username;
-    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-    const randomGif = randomGifs[Math.floor(Math.random() * randomGifs.length)];
 
     const embed = new EmbedBuilder()
         .setColor("E06C75")
         .setImage(randomGif)
-        .setDescription(`**${userMessage}** ${randomMessage} **${mentionedUser.username}**`)
+        .setDescription(description)
 
-    message.reply({ embeds: [embed] });
+    message.reply({ embeds: [embed] })
+
 }

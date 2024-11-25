@@ -22,7 +22,7 @@ export default function getShip(message) {
         extraMessage = "Remando en dulce de leche, pero remando 🚣🏻"
     }
     else if (randomNumber < 25) {
-        extraMessage = "Lamento decirte que no da para un vinculo amoroso 😔💔"
+        extraMessage = "Lamento decirte que no da para un vínculo amoroso 😔💔"
     }
 
 
