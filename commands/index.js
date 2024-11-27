@@ -9,6 +9,8 @@ import getAvatar from "./avatar.js";
 import getAngry from "./angry.js";
 import getBored from "./bored.js";
 import getDance from "./dance.js";
+import get8Ball from "./8ball.js";
+import getSay from "./say.js";
 
 const commands = {
   help: getHelp,
@@ -22,6 +24,8 @@ const commands = {
   punch: getPunch,
   bored: getBored,
   dance: getDance,
+  "8ball": get8Ball,
+  say: getSay,
 };
 
 export default commands;

@@ -23,7 +23,7 @@ export default function getHelp(message) {
         .addFields(
             {
                 name: "🧸 — Interacción.",
-                value: "`8ball`, `ask`, `avatar`, `choose`, `gay`, `say`, `ship`",
+                value: "`8ball`, `avatar`, `choose`, `gay`, `say`, `ship`",
                 inline: false,
             },
             {
