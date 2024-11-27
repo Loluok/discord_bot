@@ -16,7 +16,7 @@ export default function getHelp(message) {
   const timeInArgentina = formatter.format(date);
     const embed = new EmbedBuilder()
         .setColor("B79A81")
-        .setTitle("Blood limdo")
+        .setTitle("RAYE BOT")
         .setDescription("**[Invitación del Bot](https://discord.com/oauth2/authorize?client_id=1309585054493573171)**")
         .setThumbnail(PROFILE_BOT_URL)
         .setFooter({ text: `Hora: ${timeInArgentina}` })
@@ -28,7 +28,7 @@ export default function getHelp(message) {
             },
             {
                 name: "🦆 — Entretenimiento.",
-                value: "`angry`, `blush`, `bored`, `cry`, `dance`, `hola`, `hug`, `pat`, `punch`, `run`, `sad`, `sing`, `slap`, `sleep`",
+                value: "`angry`, `blush`, `bored`, `cry`, `dance`, `hi`, `hug`, `pat`, `punch`, `run`, `sad`, `sing`, `slap`, `sleep`",
                 inline: false,
             },  
             {
@@ -41,6 +41,11 @@ export default function getHelp(message) {
                 value: "`ban`, `kick`",
                 inline: false,
             },
+            {
+                name: "💐 — Sobre nosotros.",
+                value: "`blood`, `lolu`, `redes`",
+                inline: false,
+            }
         );
     message.reply({ embeds: [embed] });
 }

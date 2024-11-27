@@ -44,3 +44,4 @@ export default function getShip(message) {
     message.reply({ embeds: [embed] })
 }
 
+// editar ship, avisar q hice avatar

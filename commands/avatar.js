@@ -9,6 +9,5 @@ export default function getAvatar(message) {
     .setColor("45747B")
     .setDescription(`Foto de perfil de **${mentionedUser.username}** 💞`)
     .setImage(avatar)
-
     message.reply({ embeds: [embed] })
 }

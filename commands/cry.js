@@ -29,22 +29,26 @@ const randomGifs = [
 ]
 
 const messages = ["está llorando por culpa de", "llora gracias a", "llora por", "tiene depresión gracias a"]
+const messagesAlone = ["está llorando", "está destrozad@", "no deja de llorar"]
 
 export default function getCry(message) {
-    const mentionedUser = message.mentions.users.first();
+    const mentionedUser = message.mentions.users.first()
 
-    if (!mentionedUser) {
-        return message.reply("Mencioná a alguien, no podés llorar porque sí, no seas salame.")
-      }
-      
-    const userMessage = message.member.user.username
     const randomGif = randomGifs[Math.floor(Math.random() * randomGifs.length)]
     const randomMessage = messages[Math.floor(Math.random() * messages.length)]
+    const userMessage = message.member.user.username
+
+    let description = `**${userMessage}** ${randomMessage} **${mentionedUser?.username}**`
+
+    if (!mentionedUser) {
+        const aloneMessage = messagesAlone[Math.floor(Math.random() * messagesAlone.length)]
+        description = `**${userMessage}** ${aloneMessage}`
+    }
 
     const embed = new EmbedBuilder()
         .setColor("00446A")
         .setImage(randomGif)
-        .setDescription(`**${userMessage}** ${randomMessage} **${mentionedUser.username}**`)
+        .setDescription(description)
 
     message.reply({ embeds: [embed] })
 }

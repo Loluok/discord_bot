@@ -7,6 +7,8 @@ import getCry from "./cry.js";
 import getHug from "./hug.js";
 import getAvatar from "./avatar.js";
 import getAngry from "./angry.js";
+import getBored from "./bored.js";
+import getDance from "./dance.js";
 
 const commands = {
   help: getHelp,
@@ -18,6 +20,8 @@ const commands = {
   hug: getHug,
   avatar: getAvatar,
   punch: getPunch,
+  bored: getBored,
+  dance: getDance,
 };
 
 export default commands;
