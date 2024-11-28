@@ -28,7 +28,7 @@ export default function getHelp(message) {
             },
             {
                 name: "🦆 — Entretenimiento.",
-                value: "`angry`, `blush`, `bored`, `cry`, `dance`, `hi`, `hug`, `pat`, `punch`, `run`, `sad`, `sing`, `slap`, `sleep`",
+                value: "`angry`, `blush`, `bored`, `cry`, `dance`, `hello`, `hi`, `hug`, `kiss`, `pat`, `punch`, `run`, `sad`, `sing`, `slap`, `sleep`",
                 inline: false,
             },  
             {

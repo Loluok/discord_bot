@@ -11,6 +11,10 @@ import getBored from "./bored.js";
 import getDance from "./dance.js";
 import get8Ball from "./8ball.js";
 import getSay from "./say.js";
+import getHi from "./hi.js";
+import getPat from "./pat.js";
+import getKiss from "./kiss.js";
+import getRun from "./run.js";
 
 const commands = {
   help: getHelp,
@@ -26,6 +30,11 @@ const commands = {
   dance: getDance,
   "8ball": get8Ball,
   say: getSay,
+  hi: getHi,
+  hello: getHi,
+  pat: getPat,
+  kiss: getKiss,
+  run: getRun
 };
 
 export default commands;
