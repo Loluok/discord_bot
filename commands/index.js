@@ -3,6 +3,7 @@ import getPunch from "./punch.js";
 import getBlush from "./blush.js";
 import getShip from "./ship.js";
 import getGay from "./gay.js";
+import getFemboy from "./femboy.js";
 import getCry from "./cry.js";
 import getHug from "./hug.js";
 import getAvatar from "./avatar.js";
@@ -15,6 +16,7 @@ import getHi from "./hi.js";
 import getPat from "./pat.js";
 import getKiss from "./kiss.js";
 import getRun from "./run.js";
+import getSad from "./sad.js";
 
 const commands = {
   help: getHelp,
@@ -22,6 +24,7 @@ const commands = {
   angry: getAngry,
   ship: getShip,
   gay: getGay,
+  femboy: getFemboy,
   cry: getCry,
   hug: getHug,
   avatar: getAvatar,
@@ -34,7 +37,8 @@ const commands = {
   hello: getHi,
   pat: getPat,
   kiss: getKiss,
-  run: getRun
+  run: getRun,
+  sad: getSad,
 };
 
 export default commands;
