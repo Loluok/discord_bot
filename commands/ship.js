@@ -3,13 +3,24 @@ import { EmbedBuilder } from "discord.js";
 export default function getShip(message) {
 
     const randomNumber = Math.round(Math.random() * 100);
-    const userMessage = message.member.user.username
+    let userMessage = message.member.user.username
     const mentionedUser = message.mentions.users.first()
 
     let extraMessage = ""
 
     if (!mentionedUser) {
        return message.reply("Debes mencionar a un usuario.")
+    }
+
+    if (message.mentions.users.size > 1) {
+        let index = 0;
+
+        message.mentions.users.each((user) => {
+            if (index === 1) {
+                userMessage = user.username
+            }
+            index++;
+        })
     }
 
     if (randomNumber > 75) {
@@ -44,4 +55,4 @@ export default function getShip(message) {
     message.reply({ embeds: [embed] })
 }
 
-// editar ship, avisar q hice avatar
+// editar ship

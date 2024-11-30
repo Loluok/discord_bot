@@ -17,6 +17,9 @@ import getPat from "./pat.js";
 import getKiss from "./kiss.js";
 import getRun from "./run.js";
 import getSad from "./sad.js";
+import getSlap from "./slap.js";
+import getSleep from "./sleep.js";
+import getKill from "./kill.js";
 
 const commands = {
   help: getHelp,
@@ -39,6 +42,9 @@ const commands = {
   kiss: getKiss,
   run: getRun,
   sad: getSad,
+  slap: getSlap,
+  sleep: getSleep,
+  kill: getKill,
 };
 
 export default commands;

@@ -23,27 +23,22 @@ export default function getHelp(message) {
         .addFields(
             {
                 name: "🧸 — Interacción.",
-                value: "`8ball`, `avatar`, `choose`, `gay`, `say`, `ship`",
+                value: "`8ball`, `avatar`, `choose`, `facto`, `femboy`, `gay`, `say`, `ship`",
                 inline: false,
             },
             {
                 name: "🦆 — Entretenimiento.",
-                value: "`angry`, `blush`, `bored`, `cry`, `dance`, `hello`, `hi`, `hug`, `kiss`, `pat`, `punch`, `run`, `sad`, `sing`, `slap`, `sleep`",
+                value: "`angry`, `blush`, `bored`, `cry`, `dance`, `hello`, `hi`, `hug`, `kill`, `kiss`, `pat`, `punch`, `run`, `sad`, `sing`, `slap`, `sleep`",
                 inline: false,
             },  
             {
-                name: "💡 — Inteligencia Artificial.",
-                value: "`hola gays Blood va a hacer que, no sabe, va a hacer algo`",
-                inline: false,
-            },
-            {
                 name: "📒 — Moderación.",
-                value: "`ban`, `kick`",
+                value: "`ban`, `kick` -> aun no disponible je",
                 inline: false,
             },
             {
                 name: "💐 — Sobre nosotros.",
-                value: "`blood`, `lolu`, `redes`",
+                value: "`blood`, `lolu`, `donation`",
                 inline: false,
             }
         );

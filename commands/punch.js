@@ -15,7 +15,7 @@ export default function getPunch(message) {
     const mentionedUser = message.mentions.users.first();
 
     if (!mentionedUser) {
-        return message.reply("Menciona a alguien, pelotudin")
+        return message.reply("Menciona a alguien, pegale fuerte, con ganas, con bronca, aaaaaAAAAAA**AAAA**_AAAAA_👹")
     }
 
     const userMessage = message.member.user.username;
