@@ -4,9 +4,14 @@ const removeAnsiCodes = (str) => str.replace(/\x1b\[[0-9;]*m/g, "");
 
 const possibleWhitelistCommands = ["add", "remove", "list"]
 
-export default async function getWhitelist(message, messageContent) {
+export default async function getWhitelist(message) {
   const roleId = "1330932106171515021"; 
   const hasRole = message.member.roles.cache.has(roleId);
+
+  const [_, ...messageContent] = message.content
+  .slice(2) // copiamos todo el mensaje sin el "r!" <3
+  .trim() // Remueve los espacios innecesarios :o
+  .split(' '); // Convierte el string a array separando por " "
 
   if (!hasRole) {
     return message.reply("No puedes administrar la whitelist.");
