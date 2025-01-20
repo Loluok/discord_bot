@@ -17,6 +17,7 @@ import getPat from "./pat.js";
 import getKiss from "./kiss.js";
 import getRun from "./run.js";
 import getSad from "./sad.js";
+import getWhitelist from "./whitelist.js";
 
 const commands = {
   help: getHelp,
@@ -39,6 +40,9 @@ const commands = {
   kiss: getKiss,
   run: getRun,
   sad: getSad,
+  wh: getWhitelist,
+  wl: getWhitelist,
+  whitelist: getWhitelist,
 };
 
 export default commands;
