@@ -12,7 +12,7 @@ export default async function getWhitelist(message, messageContent) {
     return message.reply("No puedes administrar la whitelist.");
   }
 
-  const [whitelistCommand, player] = messageContent;
+  let [whitelistCommand, player] = messageContent;
   if (!possibleWhitelistCommands.includes(whitelistCommand)) {
     return message.reply(
       `${whitelistCommand} no se reconoce como un comando de whitelist. \nIntenta "add" o "remove".`
@@ -22,6 +22,8 @@ export default async function getWhitelist(message, messageContent) {
   if (!player && whitelistCommand !== "list") {
     return message.reply("Por favor, especifica a un jugador");
   }
+
+  if (whitelistCommand === "list") player = "";
 
   const command = `mcrcon -H 127.0.0.1 -P 25575 -p "${process.env.SERVER_RCON_PASSWORD}" "whitelist ${whitelistCommand} ${player}"`;
 
