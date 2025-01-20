@@ -2,7 +2,7 @@ import { exec } from "child_process";
 
 const removeAnsiCodes = (str) => str.replace(/\x1b\[[0-9;]*m/g, "");
 
-const possibleWhitelistCommands = ["add", "remove"]
+const possibleWhitelistCommands = ["add", "remove", "list"]
 
 export default async function getWhitelist(message, messageContent) {
   const roleId = "1330932106171515021"; 
@@ -19,7 +19,7 @@ export default async function getWhitelist(message, messageContent) {
     );
   }
 
-  if (!player) {
+  if (!player && whitelistCommand !== "list") {
     return message.reply("Por favor, especifica a un jugador");
   }
 
