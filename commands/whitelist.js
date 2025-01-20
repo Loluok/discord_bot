@@ -1,5 +1,7 @@
 import { exec } from "child_process";
 
+const removeAnsiCodes = (str) => str.replace(/\x1b\[[0-9;]*m/g, "");
+
 const possibleWhitelistCommands = ["add", "remove"]
 
 export default async function getWhitelist(message, messageContent) {
@@ -28,6 +30,6 @@ export default async function getWhitelist(message, messageContent) {
     }
 
     console.log(`stdout: ${stdout}`);
-    return message.reply(`${stdout}`);
+    return message.reply(`${removeAnsiCodes(stdout)}`);
   });
 }
