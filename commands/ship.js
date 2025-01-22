@@ -22,9 +22,11 @@ export default function getShip(message) {
             index++;
         })
     }
-
-    if (randomNumber > 75) {
+    if (randomNumber > 95) {
         extraMessage = "Es amor verdadero! 💘"
+    }
+    else if (randomNumber > 75) {
+        extraMessage = "Dense un gusto en salir 🥰"
     }
     else if (randomNumber > 50) {
         extraMessage = "Podría funcionar! 🤗"
@@ -32,10 +34,12 @@ export default function getShip(message) {
     else if (randomNumber > 25) {
         extraMessage = "Remando en dulce de leche, pero remando 🚣🏻"
     }
-    else if (randomNumber < 25) {
+    else if (randomNumber > 10) {
         extraMessage = "Lamento decirte que no da para un vínculo amoroso 😔💔"
     }
-
+    else if (randomNumber <= 10) {
+        extraMessage = "Just no."
+    }
 
     const embed = new EmbedBuilder()
         .addFields(
@@ -54,5 +58,3 @@ export default function getShip(message) {
 
     message.reply({ embeds: [embed] })
 }
-
-// editar ship

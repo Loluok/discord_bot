@@ -7,7 +7,6 @@ export default async function getSay(message, messageContent) {
 
         try {
             await message.delete()
-
         } catch (error) {
             console.error(error)
         }

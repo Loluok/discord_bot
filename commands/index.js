@@ -20,6 +20,9 @@ import getSad from "./sad.js";
 import getSlap from "./slap.js";
 import getSleep from "./sleep.js";
 import getKill from "./kill.js";
+import getChoose from "./choose.js";
+import getFact from "./facto.js";
+import getDonation from "./donation.js";
 
 const commands = {
   help: getHelp,
@@ -45,6 +48,10 @@ const commands = {
   slap: getSlap,
   sleep: getSleep,
   kill: getKill,
+  choose: getChoose,
+  fact: getFact,
+  facto: getFact,
+  donation: getDonation,
 };
 
 export default commands;
