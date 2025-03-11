@@ -23,6 +23,7 @@ import getKill from "./kill.js";
 import getChoose from "./choose.js";
 import getFact from "./facto.js";
 import getDonation from "./donation.js";
+import getWhitelist from "./whitelist.js";
 
 const commands = {
   help: getHelp,
@@ -52,6 +53,9 @@ const commands = {
   fact: getFact,
   facto: getFact,
   donation: getDonation,
+  wh: getWhitelist,
+  wl: getWhitelist,
+  whitelist: getWhitelist,
 };
 
 export default commands;
