@@ -24,7 +24,21 @@ import getChoose from "./choose.js";
 import getFact from "./facto.js";
 import getDonation from "./donation.js";
 import getWhitelist from "./whitelist.js";
+import getLolu from "./lolu.js";
+import getDice from "./dice.js";
+import getBlood from "./blood.js";
+import getTranslate from "./translate.js";
+import getKick from "./kick.js";
+import getBan from "./ban.js";
 
+/**
+ * 
+ * IDEA:
+ * - que traduzca un texto :)
+ * - sorteos
+ * - confesiones
+ * - guardar cantidad de abrazos/becho q se dieron cada uno uwu
+ */
 const commands = {
   help: getHelp,
   blush: getBlush,
@@ -56,6 +70,13 @@ const commands = {
   wh: getWhitelist,
   wl: getWhitelist,
   whitelist: getWhitelist,
+  lolu: getLolu,
+  dice: getDice,
+  dado: getDice,
+  blood: getBlood,
+  translate: getTranslate,
+  kick: getKick,
+  ban: getBan,
 };
 
 export default commands;
