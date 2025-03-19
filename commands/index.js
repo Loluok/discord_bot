@@ -29,7 +29,21 @@ import getAdd from "./add.js";
 import getResta from "./resta.js";
 import getMultiplicacion from "./multiplicacion.js";
 
+import getLolu from "./lolu.js";
+import getDice from "./dice.js";
+import getBlood from "./blood.js";
+import getTranslate from "./translate.js";
+import getKick from "./kick.js";
+import getBan from "./ban.js";
 
+/**
+ * 
+ * IDEA:
+ * - que traduzca un texto :)
+ * - sorteos
+ * - confesiones
+ * - guardar cantidad de abrazos/becho q se dieron cada uno uwu
+ */
 const commands = {
   help: getHelp,
   blush: getBlush,
@@ -61,10 +75,6 @@ const commands = {
   wh: getWhitelist,
   wl: getWhitelist,
   whitelist: getWhitelist,
-  suma: getSuma,
-  add: getAdd,
-  resta: getResta,
-  multiplicacion: getMultiplicacion,
 };
 
 export default commands;

@@ -9,7 +9,7 @@ const client = new Client({
     status: "online",
     activities: [
       {
-        name: "Morat",
+        name: "Morat | r!",
         type: ActivityType.Listening,
       },
     ],
@@ -18,6 +18,9 @@ const client = new Client({
 
 client.on(Events.ClientReady, async () => {
   console.log(`¡Encendido como ${client.user.username}!`);
+  const names = client.guilds.cache.map((guild => guild.name));
+  console.log(names);
+  console.log(`Actualmente en ${client.guilds.cache.size} servidores.`);
 });
 
 client.prefix = "r!";

@@ -23,7 +23,7 @@ export default function getHelp(message) {
         .addFields(
             {
                 name: "🧸 — Interacción.",
-                value: "`8ball`, `avatar`, `choose`, `facto`, `femboy`, `gay`, `multiplicación`, `resta`, `say`, `ship`, `suma`",
+                value: "`8ball`, `avatar`, `choose`, `dice/dado`, `facto`, `femboy`, `gay`, `multiplicación`, `resta`, `say`, `ship`, `suma`",
                 inline: false,
             },
             {
@@ -33,7 +33,7 @@ export default function getHelp(message) {
             }, 
             {
                 name: "📒 — Moderación.",
-                value: "`ban`, `kick` -> aun no disponible je",
+                value: "`ban`, `kick` -> **YA DISPONIBLE 🆕**",
                 inline: false,
             },
             {
