@@ -24,6 +24,11 @@ import getChoose from "./choose.js";
 import getFact from "./facto.js";
 import getDonation from "./donation.js";
 import getWhitelist from "./whitelist.js";
+import getSuma from "./suma.js";
+import getAdd from "./add.js";
+import getResta from "./resta.js";
+import getMultiplicacion from "./multiplicacion.js";
+
 
 const commands = {
   help: getHelp,
@@ -56,6 +61,10 @@ const commands = {
   wh: getWhitelist,
   wl: getWhitelist,
   whitelist: getWhitelist,
+  suma: getSuma,
+  add: getAdd,
+  resta: getResta,
+  multiplicacion: getMultiplicacion,
 };
 
 export default commands;

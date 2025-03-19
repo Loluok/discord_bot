@@ -23,14 +23,14 @@ export default function getHelp(message) {
         .addFields(
             {
                 name: "🧸 — Interacción.",
-                value: "`8ball`, `avatar`, `choose`, `facto`, `femboy`, `gay`, `say`, `ship`",
+                value: "`8ball`, `avatar`, `choose`, `facto`, `femboy`, `gay`, `multiplicación`, `resta`, `say`, `ship`, `suma`",
                 inline: false,
             },
             {
                 name: "🦆 — Entretenimiento.",
                 value: "`angry`, `blush`, `bored`, `cry`, `dance`, `hello`, `hi`, `hug`, `kill`, `kiss`, `pat`, `punch`, `run`, `sad`, `sing`, `slap`, `sleep`",
                 inline: false,
-            },  
+            }, 
             {
                 name: "📒 — Moderación.",
                 value: "`ban`, `kick` -> aun no disponible je",
