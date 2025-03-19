@@ -1,11 +1,11 @@
 import { EmbedBuilder } from "discord.js";
 
 export default function getResta(message, messageContent) {
-
     let resta = messageContent[0]
 
-    for (const num of messageContent) {
-    resta = resta - Number(num)
+    for (let i = 1; i < messageContent.length; i++) {
+        const num = messageContent[i]
+        resta = resta - Number(num)
     }
 
     const resultado = resta 
