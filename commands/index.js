@@ -75,6 +75,17 @@ const commands = {
   wh: getWhitelist,
   wl: getWhitelist,
   whitelist: getWhitelist,
+  lolu: getLolu,
+  dice: getDice,
+  dado: getDice,
+  blood: getBlood,
+  translate: getTranslate,
+  kick: getKick,
+  ban: getBan,
+  suma: getSuma,
+  add: getAdd,
+  resta: getResta,
+  multiplicacion: getMultiplicacion,
 };
 
 export default commands;
